@@ -1,0 +1,75 @@
+* {
+	margin: 0; padding: 0;
+}
+
+body {
+	background-color: #1b1a1b;
+}
+
+#slider {
+	width: 460px;
+	height: 345px;
+	margin-left: 212px;
+	margin-top: 79px;
+}
+
+#container {
+	width: 883px;
+	height: 535px;
+	background-image: url(images/ipad.jpg);
+	overflow: hidden;
+	margin: 30px auto;
+}
+
+/*Header Styles*/
+#header {
+	font-family: Palatino, Georgia, serif;
+	background: black;
+	color: white;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+}
+
+#header a{
+	color: #ccc;
+	text-decoration: none;
+}
+
+
+#header a:hover{
+	color: #white;
+	text-decoration: underline;
+}
+
+#footer {
+	margin: 0 auto;
+	margin-top: -70px;
+	margin-bottom: 100px;
+	width: 883px;
+}
+
+#footer h2{
+	text-align: center;
+	font-family: Georgia, serif;
+	font-size: 50px;
+	font-style: normal;
+	font-weight: normal;
+	text-transform: normal;
+	letter-spacing: normal;
+	line-height: 1.4em;
+	color: #deddde;
+	text-shadow: #323132 3px 3px 0px;
+	text-transform: uppercase;
+}
+
+#footer p{
+	text-align: center;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 300;
+	font-size: 15px;
+	line-height: 1.4em;
+	color: #deddde;
+	text-shadow: #323132 2px 2px 0px;
+}
+

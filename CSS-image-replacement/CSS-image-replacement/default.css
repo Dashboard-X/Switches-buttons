@@ -1,0 +1,101 @@
+/* ------------------------------------------
+CSS IMAGE REPLACEMENT USING PSEUDO-ELEMENTS
+by Nicolas Gallagher
+- http://nicolasgallagher.com/css-image-replacement-using-pseudo-elements/
+
+http://nicolasgallagher.com
+http://twitter.com/necolas
+
+Created: 13 June 2010
+Version: 1.0
+
+Dual licensed under MIT and GNU GPLv2 © Nicolas Gallagher 
+------------------------------------------ */
+
+
+/* ----------------------------------------------------------------------------------------------------------------------------
+== GENERAL STYLES
+** ---------------------------------------------------------------------------------------------------------------------------- */
+
+html, body                             {padding:0; margin:0; font:1em/1.4 Cambria, Georgia, sans-serif; color:#333; background:#fff;}
+header, hgroup                         {display:block;}
+
+a:link, a:visited                      {border-bottom:1px solid #c55500; color:#c55500; text-decoration:none;}
+a:visited                              {border-bottom:1px solid #730800; color:#730800;}
+a:hover, a:focus, a:active             {border:0; color:#fff; background:#c55500;}
+a:visited:hover,
+ a:visited:focus,
+ a:visited:active                      {color:#fff; background:#730800;}
+
+.container                             {width:540px; padding:0 0 10px; margin:0 auto 30px;}
+.footer                                {padding:10px 0 30px; margin-bottom:0;}
+
+h1                                     {margin:1em 0 0; font-size:2.5em; font-weight:normal; line-height:1.2; text-align:center;}
+h2                                     {margin:0.5em 0 1.5em; font-size:1.25em; font-weight:normal; font-style:italic; text-align:center;}
+p                                      {margin:1em 0; line-height:1.4em;}
+
+pre                                    {margin:1.4em 0; font-size:12px; line-height:1.4em; white-space:pre-wrap; word-wrap:break-word;}
+
+.follow                                {clear:both; margin-top:2em; font-size:1.125em;}
+.follow span                           {font-weight:bold;}
+
+
+/* ----------------------------------------------------------------------------------------------------------------------------
+== IMAGE REPLACEMENT NAVIGATION
+** ---------------------------------------------------------------------------------------------------------------------------- */
+
+/* basic list styles */
+
+#nav {
+    width:225px;
+    padding:0;
+    margin:0 auto 30px;
+    list-style:none;
+    background:#fefcc9;
+}
+
+#nav li {
+    margin:0 0 5px;
+}
+
+#nav a {
+    border:0;
+    background:transparent;
+}
+
+/* modified-NIR */
+
+#nav a {
+    display:block;
+    width:225px;
+    height:46px;
+    overflow:hidden;
+}
+
+#nav a:before {
+    content:url(sprite.png);
+    display:-moz-inline-block; /* adds support to Firefox 1.5+ */
+    display:inline-block;
+    font-size:0;
+    line-height:0;
+}
+
+/* repositioning the sprite */
+
+#nav-item-2 a:before         {margin:-92px 0 0;}
+#nav-item-3 a:before         {margin:-184px 0 0;}
+
+#nav-item-1 a:hover:before,
+ #nav-item-1 a:focus:before,
+ #nav-item-1 a:active:before {margin:-46px 0 0;}
+ 
+#nav-item-2 a:hover:before,
+ #nav-item-2 a:focus:before,
+ #nav-item-2 a:active:before {margin:-138px 0 0;}
+ 
+#nav-item-3 a:hover:before,
+ #nav-item-3 a:focus:before,
+ #nav-item-3 a:active:before {margin:-230px 0 0;}
+
+/* :hover hack for IE8 */
+#nav a:hover {cursor:pointer;} 

@@ -1,0 +1,280 @@
+<head>
+<style>
+div.presentationbox{
+	width:600px;
+	border:1px solid #000;
+	padding:10px;
+}
+
+pre{
+	text-align:left;
+	width:300px;
+}
+
+
+
+/**demo1**/
+a{
+	font-size:30px;color:#000; 
+	-webkit-transition:color 1s ease-in;
+} 
+
+a:hover{
+	color:#f00;
+}
+
+
+/**demo2**/
+input.ourInputBox:focus{
+	-webkit-transition:background-color 0.5s linear; 
+	background:#CCC; 
+}
+
+
+/**demo3**/
+a.thebg{
+	color:#000; 
+	background:#f00; 
+	padding:5px; 
+	-webkit-border-radius: 5px; 
+	
+	-webkit-transition-property:color, background; 
+	-webkit-transition-duration: 1s, 1s; 
+	-webkit-transition-timing-function: linear, ease-in;
+} 
+a.thebg:hover{
+	color:#f00;
+	background:#000;
+}
+
+/**demo4**/
+#signpost{
+	width:20px;
+	height:196px;
+	position:relative;
+}
+
+#signpost #post{
+	width:79px;
+	height:196px;
+	z-index:2;
+	position:relative;
+}
+
+#signpost #sign{
+	height:46px;
+	width:80px;
+	position:absolute;
+	top:10;
+	left:60;
+	-webkit-transform-origin:0 0;
+	-webkit-transform: rotate(86deg);
+	z-index:1;
+	-webkit-transition:-webkit-transform 0.5s ease-in-out;
+}
+#signpost:hover #sign{
+	-webkit-transform:rotate(0deg);
+}
+
+
+/**demo5**/
+#circles{
+	width:180px; 
+	height:180px;
+	position:relative;
+}
+.outercircle{
+	width:180px; 
+	height:180px;
+	position:absolute;
+	z-index:1;
+	top:0: 
+	left:0;
+}
+#circles:hover .outercircle {
+	-webkit-animation-name: spin;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-duration: 10s;
+}	
+@-webkit-keyframes spin {
+from {
+	-webkit-transform: rotate(0deg);
+	}
+
+to {
+	-webkit-transform: rotate(360deg);
+
+	}
+}
+
+.middlecircle{
+	width:90px; 
+	height:90px;
+	position:absolute;
+	z-index:3;
+	top:45px; 
+	left:45px;
+}
+#circles:hover .middlecircle{
+	-webkit-animation-name: spinrev;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-duration: 5s;
+}	
+	
+	
+@-webkit-keyframes spinrev {
+from {
+	-webkit-transform: rotate(0deg);
+	}
+
+to {
+	-webkit-transform: rotate(-360deg);
+
+	}
+}
+
+</style>
+</head>
+<body>
+
+
+<div class="presentationbox">
+<a href="">this is a link</a>
+
+<pre name="code" class="css"> a{color:#000;} a:hover{color:#f00;}</pre>
+</div>
+
+
+<div class="presentationbox">
+<input class="ourInputBox" />
+<pre name="code" class="css">
+input.ourInputBox:focus{
+-webkit-transition:background-color 0.5s linear; 
+background:#CCC; }
+</pre>
+</div>
+
+<div class="presentationbox">
+<a href="" class="thebg">this is a link</a>
+
+<pre name="code" class="css">
+a.thebg{
+color:#000; 
+background:#f00; 
+padding:5px; 
+-webkit-border-radius: 5px; 
+
+-webkit-transition-property:color, background; 
+-webkit-transition-duration: 1s, 1s; 
+-webkit-transition-timing-function: linear, ease-in;
+} 
+a.thebg:hover{color:#f00;
+background:#000;}
+
+</pre>
+</div>
+
+<div class="presentationbox">
+
+<div id="signpost">
+	<img id="post" src="post.png">
+	<img id="sign" src="sign.png">
+</div>
+
+<pre name="code" class="css">#signpost{
+	width:60px;
+	height:196px;
+	position:relative;
+}
+
+#signpost #post{
+	width:79px;
+	height:196px;
+	z-index:2;
+	position:relative;
+}
+
+#signpost #sign{
+	height:46px;
+	width:80px;
+	position:absolute;
+	top:10;
+	left:60;
+	-webkit-transform-origin:0 0;
+	-webkit-transform: rotate(86deg);
+	z-index:1;
+	-webkit-transition:-webkit-transform 0.5s ease-in-out;
+}
+#signpost:hover #sign{
+	-webkit-transform:rotate(0deg);
+}</pre>
+</div>
+
+<div class="presentationbox">
+	<div id="circles">
+	<img src="outer.png" width="180" height="180" class="outercircle"/>
+	<img src="middle.png" width="90" height="90" class="middlecircle"/>
+	</div>
+
+<pre name="code" class="css">#circles{
+	width:180px; 
+	height:180px;
+	position:relative;
+}
+.outercircle{
+	width:180px; 
+	height:180px;
+	position:absolute;
+	z-index:1;
+	top:0: 
+	left:0;
+}
+#circles:hover .outercircle {
+	-webkit-animation-name: spin;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-duration: 10s;
+}	
+@-webkit-keyframes spin {
+from {
+	-webkit-transform: rotate(0deg);
+	}
+
+to {
+	-webkit-transform: rotate(360deg);
+
+	}
+}
+
+.middlecircle{
+	width:90px; 
+	height:90px;
+	position:absolute;
+	z-index:3;
+	top:45px; 
+	left:45px;
+}
+#circles:hover .middlecircle{
+	-webkit-animation-name: spinrev;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-duration: 5s;
+}	
+	
+	
+@-webkit-keyframes spinrev {
+from {
+	-webkit-transform: rotate(0deg);
+	}
+
+to {
+	-webkit-transform: rotate(-360deg);
+
+	}
+}</pre>
+</div>
+
+
+</body>
